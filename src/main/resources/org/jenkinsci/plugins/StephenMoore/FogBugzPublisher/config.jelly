@@ -1,0 +1,69 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <!--
+	Creates a text field that shows the value of the "name" property.
+	When submitted, it will be passed to the corresponding constructor parameter.
+  -->
+  
+<f:entry title="FogBugz Parameters" field="FogBugzParameters">
+	<f:expandableTextbox />
+</f:entry>
+<f:entry title="Jenkins host:port" field="HostPort">
+	<f:textbox />
+</f:entry>
+<f:entry title="Relog interval" field="Interval">
+	<f:textbox />
+</f:entry>
+<f:section title="Console Fields">
+	<f:entry title="Console" field="console">
+		<f:booleanRadio />
+	</f:entry>
+	<f:entry title="Console with Regex" field="regex">
+		<f:booleanRadio />
+	</f:entry>
+	<f:entry title="Regex" field="RegexField">
+		<f:textbox />
+	</f:entry>
+	<f:entry title="Group" field="Group">
+		<f:textbox />
+	</f:entry>
+	 <f:advanced title="Common Regex Options" > 
+		<f:entry title="CASE_INSENSITIVE" field="CaseInsensitive">
+			<f:booleanRadio />
+		</f:entry>
+		<f:entry title="DOT_ALL" field="DotAll">
+			<f:booleanRadio />
+		</f:entry>
+		<f:advanced title="Advanced Options" > 
+			<f:entry title="CANON_EQ" field="CanonEq">
+				<f:booleanRadio />
+			</f:entry>
+			<f:entry title="COMMENTS" field="Comments">
+				<f:booleanRadio />
+			</f:entry>
+			<f:entry title="LITERAL" field="Literal">
+				<f:booleanRadio />
+			</f:entry>
+			<f:entry title="MULTILINE" field="Multiline">
+				<f:booleanRadio />
+			</f:entry>
+			<f:entry title="UNICODE_CASE" field="UnicodeCase">
+				<f:booleanRadio />
+			</f:entry>
+			<f:entry title="UNICODE_CHARACTER_CLASS" field="UnicodeCharacterClass">
+				<f:booleanRadio />
+			</f:entry>
+			<f:entry title="UNIX_LINES" field="UnixLines">
+				<f:booleanRadio />
+			</f:entry>
+		</f:advanced>
+	</f:advanced>
+	</f:section>
+<f:section title="Unit Fields">
+	<f:entry title="Combined Unit Test Results" field="unit">
+		<f:booleanRadio />
+	</f:entry>
+	<f:entry title="Individual Unit Test Results" field="multi">
+		<f:booleanRadio />
+	</f:entry>
+</f:section>
+</j:jelly>
